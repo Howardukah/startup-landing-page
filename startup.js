@@ -203,15 +203,6 @@ document.addEventListener('DOMContentLoaded', () => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         setActiveLink(entry.target.id);
-        // Update URL path silently without adding history entries to the back button stack
-        try {
-          const currentPath = window.location.pathname.replace(/^\/|\/$/g, '');
-          if (currentPath !== entry.target.id) {
-            window.history.replaceState(null, null, '/' + entry.target.id);
-          }
-        } catch (historyErr) {
-          console.warn("Unable to update address bar path via replaceState:", historyErr);
-        }
       }
     });
   }, {
@@ -225,17 +216,10 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', () => {
     if (window.scrollY < 100) {
       clearIndicator();
-      try {
-        if (window.location.pathname !== '/') {
-          window.history.replaceState(null, null, '/');
-        }
-      } catch (historyErr) {
-        console.warn("Unable to reset address bar path via replaceState:", historyErr);
-      }
     }
   });
 
-  // Intercept all hash link clicks for custom smooth scroll & history pushState
+  // Intercept all hash link clicks for custom smooth scroll
   document.addEventListener('click', (e) => {
     const anchor = e.target.closest('a[href^="#"]');
     if (!anchor) return;
@@ -249,11 +233,10 @@ document.addEventListener('DOMContentLoaded', () => {
           top: 0,
           behavior: 'smooth'
         });
-        window.history.pushState(null, null, '/');
       } catch (scrollErr) {
         // Fallback scrollTo for compatibility
         window.scrollTo(0, 0);
-        console.warn("Smooth scroll/history update failed, fallback applied:", scrollErr);
+        console.warn("Smooth scroll failed, fallback applied:", scrollErr);
       }
       return;
     }
@@ -264,7 +247,6 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       try {
         targetEl.scrollIntoView({ behavior: 'smooth' });
-        window.history.pushState(null, null, '/' + targetId);
       } catch (scrollErr) {
         // Fallback scrollIntoView for compatibility
         try {
@@ -272,34 +254,10 @@ document.addEventListener('DOMContentLoaded', () => {
         } catch (innerErr) {
           console.error("Scroll to element failed completely:", innerErr);
         }
-        console.warn("Smooth scroll/history update failed, fallback applied:", scrollErr);
+        console.warn("Smooth scroll failed, fallback applied:", scrollErr);
       }
     }
   });
-
-  // Initial Route Handling on Page Load
-  try {
-    const initialPath = window.location.pathname.replace(/^\/|\/$/g, '');
-    if (initialPath && sectionIds.includes(initialPath)) {
-      const targetEl = document.getElementById(initialPath);
-      if (targetEl) {
-        // Delay slightly to ensure elements are fully rendered/positioned
-        setTimeout(() => {
-          try {
-            targetEl.scrollIntoView({ behavior: 'smooth' });
-          } catch (scrollErr) {
-            try {
-              targetEl.scrollIntoView();
-            } catch (innerErr) {
-              console.error("Scroll to initial path failed:", innerErr);
-            }
-          }
-        }, 300);
-      }
-    }
-  } catch (routeErr) {
-    console.error("Failed to parse or route initial path:", routeErr);
-  }
 
   // ---------- Booking Form Submission & Supabase Integration ----------
   const bookingForm = document.getElementById('bookingForm');
