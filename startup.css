@@ -906,12 +906,12 @@ h1, h2, h3, h4 {
 
 /* ---------- Booking Form & Success Card ---------- */
 .booking-form {
-  max-width: 580px;
-  margin: 20px auto 0;
+  max-width: 420px;
+  margin: 16px auto 0;
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid rgba(255, 255, 255, 0.05);
-  border-radius: 20px;
-  padding: 24px;
+  border-radius: 16px;
+  padding: 18px;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
@@ -922,20 +922,20 @@ h1, h2, h3, h4 {
 .form-grid {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  margin-bottom: 20px;
+  gap: 10px;
+  margin-bottom: 14px;
 }
 
 .form-group {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 8px;
+  gap: 5px;
   width: 100%;
 }
 
 .form-group label {
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 600;
   color: var(--teal);
   text-transform: uppercase;
@@ -945,13 +945,13 @@ h1, h2, h3, h4 {
 .form-group input,
 .form-group select {
   width: 100%;
-  padding: 14px 16px;
-  border-radius: 12px;
+  padding: 10px 12px;
+  border-radius: 10px;
   background: rgba(0, 0, 0, 0.35);
   border: 1px solid rgba(255, 255, 255, 0.08);
   color: #fff;
   font-family: 'Satoshi', sans-serif;
-  font-size: 15px;
+  font-size: 13px;
   transition: all 0.3s var(--ease-out-expo);
   box-sizing: border-box;
 }
@@ -975,13 +975,13 @@ h1, h2, h3, h4 {
   display: flex;
   align-items: center;
   width: 100%;
-  padding: 14px 16px;
-  border-radius: 12px;
+  padding: 10px 12px;
+  border-radius: 10px;
   background: rgba(0, 0, 0, 0.35);
   border: 1px solid rgba(255, 255, 255, 0.08);
   color: #fff;
   font-family: 'Satoshi', sans-serif;
-  font-size: 15px;
+  font-size: 13px;
   box-sizing: border-box;
   cursor: text;
   user-select: none;
@@ -1035,7 +1035,7 @@ h1, h2, h3, h4 {
 .form-row-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px;
+  gap: 10px;
   width: 100%;
 }
 
@@ -1044,13 +1044,13 @@ h1, h2, h3, h4 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
+  gap: 10px;
   width: 100%;
   background: linear-gradient(135deg, var(--teal), var(--indigo));
   color: var(--bg);
-  padding: 16px 32px;
+  padding: 12px 24px;
   border-radius: 100px;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 700;
   font-family: 'Satoshi', sans-serif;
   border: none;
