@@ -847,7 +847,7 @@ h1, h2, h3, h4 {
 /* ---------- Contact Section ---------- */
 .contact {
   position: relative;
-  overflow: visible;
+  overflow: hidden;
   z-index: 1;
   padding: 56px 0 32px !important;
   min-height: calc(100vh - 72px) !important;
