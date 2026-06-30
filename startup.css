@@ -849,12 +849,12 @@ h1, h2, h3, h4 {
   position: relative;
   overflow: visible;
   z-index: 1;
-  /* Add top padding so heading isn't hidden under fixed navbar */
-  padding: 88px 0 0 !important;
-  min-height: auto !important;
-  display: block !important;
-  justify-content: unset !important;
-  scroll-margin-top: 0;
+  /* Use standard section scroll-margin-top (72px) so heading clears the fixed navbar */
+  padding: 56px 0 0 !important;
+  min-height: 100vh !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
 }
 
 .contact-glow {
