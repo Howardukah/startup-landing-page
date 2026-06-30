@@ -1275,17 +1275,18 @@ footer.contact-footer .copyright {
   padding-bottom: 4px;
 }
 
-/* Force footer-inner to row on all sizes inside contact-footer */
+/* Inside contact footer, stack on mobile, row on desktop */
 footer.contact-footer .footer-inner {
-  flex-direction: row;
-  justify-content: space-between;
   align-items: center;
-  gap: 16px;
+  gap: 20px;
+  text-align: center;
 }
 
 footer.contact-footer .footer-links {
-  gap: 20px;
+  gap: 16px;
   font-size: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .footer-right {
@@ -1307,12 +1308,37 @@ footer.contact-footer .footer-links {
 @media (max-width: 767px) {
   footer.contact-footer .footer-inner {
     flex-direction: column;
-    gap: 20px;
+    gap: 18px;
     text-align: center;
   }
   .footer-right {
     flex-direction: column;
     gap: 12px;
+    align-items: center;
+  }
+  .footer-links {
+    gap: 14px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* Desktop: single row layout */
+@media (min-width: 768px) {
+  footer.contact-footer .footer-inner {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    gap: 16px;
+  }
+  footer.contact-footer .footer-links {
+    gap: 20px;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+  .footer-right {
+    flex-direction: row;
+    gap: 20px;
   }
 }
 
