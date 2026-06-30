@@ -1,5 +1,5 @@
 /* ---------- Premium Design System & Variables ---------- */
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&display=swap');
 
 :root {
   --bg: #050508;
@@ -44,7 +44,7 @@ html {
 }
 
 body {
-  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-family: 'Satoshi', system-ui, sans-serif;
   background: var(--bg);
   color: var(--fg);
   -webkit-font-smoothing: antialiased;
@@ -140,9 +140,9 @@ section.hero {
 
 /* ---------- Typography Customizations ---------- */
 h1, h2, h3, h4 {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'Satoshi', sans-serif;
   font-weight: 700;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
 }
 
 .accent-text {
@@ -196,7 +196,7 @@ h1, h2, h3, h4 {
   font-size: 26px;
   font-weight: 700;
   letter-spacing: -0.03em;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'Satoshi', sans-serif;
   display: flex;
   align-items: center;
 }
@@ -766,7 +766,7 @@ h1, h2, h3, h4 {
   color: var(--teal);
   font-weight: 700;
   font-size: 15px;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'Satoshi', sans-serif;
   box-shadow: 0 0 10px rgba(0, 245, 212, 0.12);
   flex-shrink: 0;
   margin-bottom: 4px;
@@ -826,7 +826,7 @@ h1, h2, h3, h4 {
 .stat-num {
   font-size: clamp(28px, 4vw, 38px);
   font-weight: 700;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'Satoshi', sans-serif;
   background: linear-gradient(135deg, #fff 40%, var(--teal) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -949,7 +949,7 @@ h1, h2, h3, h4 {
   background: rgba(0, 0, 0, 0.35);
   border: 1px solid rgba(255, 255, 255, 0.08);
   color: #fff;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'Satoshi', sans-serif;
   font-size: 15px;
   transition: all 0.3s var(--ease-out-expo);
   box-sizing: border-box;
@@ -979,7 +979,7 @@ h1, h2, h3, h4 {
   background: rgba(0, 0, 0, 0.35);
   border: 1px solid rgba(255, 255, 255, 0.08);
   color: #fff;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'Satoshi', sans-serif;
   font-size: 15px;
   box-sizing: border-box;
   cursor: text;
@@ -1026,7 +1026,7 @@ h1, h2, h3, h4 {
   font-weight: 700;
   text-transform: uppercase;
   color: #fff;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'Satoshi', sans-serif;
   pointer-events: none;
 }
 
@@ -1051,7 +1051,7 @@ h1, h2, h3, h4 {
   border-radius: 100px;
   font-size: 15px;
   font-weight: 700;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'Satoshi', sans-serif;
   border: none;
   cursor: pointer;
   box-shadow: 0 10px 30px -10px rgba(0, 245, 212, 0.4);
@@ -1147,7 +1147,7 @@ h1, h2, h3, h4 {
   border-radius: 100px;
   font-size: 14px;
   font-weight: 600;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'Satoshi', sans-serif;
   cursor: pointer;
   transition: all 0.3s ease;
 }
