@@ -321,6 +321,9 @@ h1, h2, h3, h4 {
   .menu-btn {
     display: none;
   }
+  .hero-cta-wrap {
+    display: inline-block;
+  }
 }
 
 .mobile-menu {
@@ -452,6 +455,7 @@ h1, h2, h3, h4 {
 }
 
 .hero-cta-wrap {
+  display: none;
   margin-top: 48px;
   opacity: 0;
   transform: translateY(15px);
